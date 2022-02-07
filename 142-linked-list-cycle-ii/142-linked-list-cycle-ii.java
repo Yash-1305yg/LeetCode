@@ -18,7 +18,7 @@ public class Solution {
             slow=slow.next;
             
             fast=fast.next.next;
-            if(slow==fast){
+            if(slow==fast){ //fast and slow dono mein se kisi pe bhi equal ho sakte hain islie slow ko wapas s ehead se chalu karke fast ke equal karana padega
                 slow=head;
                 while(slow!=fast){
                     slow=slow.next;
