@@ -1,16 +1,18 @@
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-        for(int i=0;i<nums.length;i++)
+        
+        Arrays.sort(nums);
+        for(int i=0;i<nums.length-1;i++)
         {
             int ind=nums[i];
-            for(int j=i+1;j<nums.length;j++)
-            {
-                if(nums[j]==ind)
+            
+                if(nums[i+1]==ind)
                 {
                     return true;
-                }
-            }
+                } 
+
         }
+        
         return false;
     }
 }
