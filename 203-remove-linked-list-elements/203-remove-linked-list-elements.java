@@ -31,10 +31,8 @@ class Solution {
             if (curr == null)
                 return head;
  
-            // Unlink the node from linked list
             temp.next = curr.next;
  
-            // Update Temp for next iteration of outer loop
             curr = temp.next;
         }
         return head;
