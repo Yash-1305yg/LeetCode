@@ -30,7 +30,7 @@ class Solution {
         
         for(int i = 0 ; i < allowed.length();i++)
         {
-            map.put(allowed.charAt(i), map.getOrDefault(allowed.charAt(i),0)+1);
+            map.put(allowed.charAt(i),0);
         }
         for(int i=0;i<words.length;i++)
         {
