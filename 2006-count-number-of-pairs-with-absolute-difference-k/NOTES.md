@@ -1,0 +1,1 @@
+pehle map mein saari values put karenge fir loop laga ke check karenge ki ind pe jo value hai usme i+k or i-k vlaue map mein hai ki nhi or agar hai to uski count ko result mein add kar denge
