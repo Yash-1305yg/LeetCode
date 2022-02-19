@@ -30,5 +30,17 @@ class Solution {
                 count++;
         }
         return count;
+        
+        /////third method by using log/////
+        
+//         int count=0;
+//         for(int i: nums)
+//         {
+//             if(i < 0)
+//                 i = i*-1;
+            
+//             count=(int)(Math.log10(i))+1;
+//         }
+//         return count;
     }
 }
