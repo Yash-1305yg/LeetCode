@@ -1,5 +1,8 @@
 class Solution {
     public int[][] flipAndInvertImage(int[][] image) {
+        
+        //not the fastest solution
+        
          for(int i=0;i<image.length;i++)
          {
                  int s=0;
