@@ -19,10 +19,10 @@ class Solution {
         
         ///2nd method////
         
-        k=k%nums.length;
-        reverse(nums,0,nums.length-1);
-        reverse(nums,0,k-1);
-        reverse(nums,k,nums.length-1);
+        k=k%nums.length; //there might be some testcases where k is greater than the given length of array
+        reverse(nums,0,nums.length-1); //first we will reverse the whole array 7,6,5,4,3,2,1
+        reverse(nums,0,k-1); // then we will reverse the starting part of the array 5,6,7,4,3,2,1
+        reverse(nums,k,nums.length-1); // then we will reverse the last part of the array of given length 5,6,7,1,2,3,4
         
     }
     
