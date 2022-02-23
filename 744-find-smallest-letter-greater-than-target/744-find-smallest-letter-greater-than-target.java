@@ -14,7 +14,7 @@ class Solution {
                 start = mi + 1;
             }
         }
-            return arr[start%arr.length];
+            return arr[start%arr.length];//same code as binary search just remove the mid equlas consition ans return start % length for the wrap around part
         
     }
 }
