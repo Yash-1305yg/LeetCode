@@ -1,5 +1,7 @@
 class Solution {
     public boolean isSubsequence(String s, String t) {
+        //1st method using two pointers
+        
         if(s.length()==0)
             return true;
         int start =0;
