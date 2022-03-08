@@ -35,30 +35,25 @@ class Solution{
     ArrayList<Integer> subsetSums(ArrayList<Integer> arr, int N){
         // code here
         int n = arr.size();
-        ArrayList<Integer> list = new ArrayList<>();
+        
         ArrayList<Integer> list2= new ArrayList<>();
-        func(0 ,arr, list,list2 ,n);
+        func(0 ,0,arr,list2 ,n);
         return list2;
     }
-    static void func(int i ,ArrayList<Integer> arr, ArrayList<Integer> list,ArrayList<Integer> list2,int n)
+    static void func(int i ,int sum,ArrayList<Integer> arr,ArrayList<Integer> list2,int n)
     {
         if(i>=n)
         {
-            int sum=0;
-            for(int kk: list)
-            {
-                sum = sum+kk;
-            }
             list2.add(sum);
             return;
         }
 
         // to pick condition
-        list.add(arr.get(i));
-        func(i+1,arr,list,list2,n);
-        list.remove(new Integer(arr.get(i))); // we used this because it was giving out of bound error , arraylist has 2 method to remove so we used object
+        
+        func(i+1,sum+arr.get(i),arr,list2,n);
+         // we used this because it was giving out of bound error , arraylist has 2 method to remove so we used object
         //to not pick ocndition
-        func(i+1,arr,list,list2,n);
+        func(i+1,sum ,arr,list2,n);
 
 //        func(i+1,arr,list,n);  // to print in reverse order
 //        list.add(arr[i]);
