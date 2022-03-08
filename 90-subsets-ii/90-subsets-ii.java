@@ -17,7 +17,7 @@ class Solution {
         
         for(int i= ind;i<nums.length;i++)
         {
-            if(i!=ind && nums[i] == nums[i-1])
+            if(i>ind && nums[i] == nums[i-1])
                 continue;
             ds.add(nums[i]);
             func(i+1,nums,list,ds);
