@@ -1,5 +1,6 @@
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
+        //there are 2 metho to solve this question check notes
         List<List<Integer>> ans = new ArrayList<>();
         List<Integer> fs = new ArrayList<>();
         boolean[] arr = new boolean[nums.length];
