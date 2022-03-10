@@ -1,29 +1,35 @@
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
-        //there are 2 metho to solve this question check notes
+        //there are two methods to solve this problem check notes
+        //second method without using extra space
         List<List<Integer>> ans = new ArrayList<>();
-        List<Integer> fs = new ArrayList<>();
-        boolean[] arr = new boolean[nums.length];
-        func(nums,ans,fs,arr);
+        func(0,nums,ans);
         return ans;
     }
-    public void func(int[] nums, List<List<Integer>> ans,List<Integer> fs,boolean[] arr)
+    public void func(int ind,int[] nums, List<List<Integer>> ans)
     {
-        if(fs.size()==nums.length)
+        if(ind==nums.length)
         {
+            List<Integer> fs = new ArrayList<>();
+            for(int j:nums)
+            {
+                fs.add(j);
+            }
             ans.add(new ArrayList<>(fs));
             return;
         }
-        for(int i=0;i<nums.length;i++)
+        
+        for(int i=ind;i<nums.length;i++)
         {
-            if(!arr[i])
-            {
-                arr[i]=true;
-                fs.add(nums[i]);
-                func(nums,ans,fs,arr);
-                fs.remove(fs.size()-1);
-                arr[i]=false;
-            }
+            swap(i,ind,nums);
+            func(ind+1,nums,ans);
+            swap(i,ind,nums);
         }
+    }
+    public void swap(int i,int j,int[] nums)
+    {
+        int temp = nums[i];
+        nums[i]=nums[j];
+        nums[j]=temp;
     }
 }
