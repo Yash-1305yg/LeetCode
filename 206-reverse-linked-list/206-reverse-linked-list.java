@@ -10,6 +10,8 @@
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
+        //1st method simple and faster
+        
 //         ListNode prev = null;
 //         ListNode current = head;
 //         ListNode temp=null;
@@ -21,6 +23,8 @@ class Solution {
             
 //         }
 //         return prev;
+        
+        //2nd method using recursion but slower but useful in fututre problems
         if(head==null || head.next==null)return head;
         int len=0;
         ListNode curr=head;
