@@ -6,7 +6,7 @@ class Solution {
         for(int i: pushed)
         {
             stack.push(i);
-            while(!stack.isEmpty() && j<len && stack.peek() ==  popped[j])
+            while(!stack.isEmpty() && stack.peek() ==  popped[j])
             {
                 stack.pop();
                 j++;
