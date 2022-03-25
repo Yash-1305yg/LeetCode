@@ -6,7 +6,7 @@ class Solution {
         for(int i: pushed)
         {
             stack.push(i);
-            while(!stack.isEmpty() && stack.peek() ==  popped[j])
+            while(!stack.isEmpty() && j<len && stack.peek() ==  popped[j]) // j<N is there to check whether the length of both the arrays is same or not if it is guaranteed than it is not necessary but it is good for safe practice
             {
                 stack.pop();
                 j++;
