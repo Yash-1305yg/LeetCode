@@ -8,7 +8,7 @@ class Solution {
             int mid=start+(end-start)/2;
             if(mid*mid==num )
                 return true;
-             if(mid > num / mid)
+             if(mid > num / mid)//to prevent overflow
             {
                 end=mid-1;
             }
