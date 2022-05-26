@@ -28,16 +28,26 @@ class GFG {
 
 class Solution {
     int MissingNumber(int array[], int n) {
-        // Your Code Here
-        boolean[] arr = new boolean[n];
-        for(int i = 0 ; i < array.length ; i++){
-            arr[array[i]-1] = true;
+        
+        // My solution
+        // boolean[] arr = new boolean[n];
+        // for(int i = 0 ; i < array.length ; i++){
+        //     arr[array[i]-1] = true;
+        // }
+        // int temp=0;
+        // for(int i=0;i<arr.length;i++){
+        //     if(arr[i]==false)
+        //         temp=i;
+        // }
+        // return temp+1;
+        
+        // More optimized solution using sum formula
+        
+        int sum1 = (n*(n+1))/2;
+        int sum2=0;
+        for(int i : array){
+            sum2 = sum2+i;
         }
-        int temp=0;
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]==false)
-                temp=i;
-        }
-        return temp+1;
+        return sum1-sum2;
     }
 }
