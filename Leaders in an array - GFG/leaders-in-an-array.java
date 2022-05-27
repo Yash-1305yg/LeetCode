@@ -47,28 +47,17 @@ class Solution{
     //Function to find the leaders in the array.
     static ArrayList<Integer> leaders(int arr[], int n){
         // Your code here
-        // ArrayList<Integer> res = new ArrayList<>();
-        // int max_right = arr[n-1];
-        // res.add(arr[n-1]);
-        // for(int i = n-2 ; i>=0 ;i--){
-        //     if(max_right < arr[i]){
-        //         max_right = arr[i];
-        //         res.add(arr[i]);
-        //     }
-        // }
-        // Collections.reverse(res);
-        // return res;
-         ArrayList <Integer> ans = new ArrayList<>();
-       if(n==0) return ans;
-       ans.add(arr[n-1]);
-       int max = arr[n-1];
-       for(int i=n-2;i>=0;i--){
-           if(max<=arr[i]){
-               max = arr[i];
-               ans.add(arr[i]);
-           }
-       }
-       Collections.reverse(ans);
-       return ans;
+        ArrayList<Integer> res = new ArrayList<>();
+        int max_right = arr[n-1];
+        res.add(arr[n-1]);
+        for(int i = n-2 ; i>=0 ;i--){
+            if(max_right <= arr[i]){
+                max_right = arr[i];
+                res.add(arr[i]);
+            }
+        }
+        Collections.reverse(res);
+        return res;
+        
     }
 }
